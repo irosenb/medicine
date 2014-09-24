@@ -12,6 +12,8 @@
 		6AE5B1F919BFDD930058B309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5B1F719BFDD930058B309 /* Main.storyboard */; };
 		6AE5B1FB19BFDD930058B309 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5B1FA19BFDD930058B309 /* Images.xcassets */; };
 		6AE5B20719BFDD930058B309 /* MedicineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5B20619BFDD930058B309 /* MedicineTests.swift */; };
+		6AF83F3A19D343D10047CE0E /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF83F3919D343D10047CE0E /* Bluetooth.swift */; };
+		6AF9AF2519C4C6E2008C79CA /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9AF2419C4C6E2008C79CA /* WalkthroughView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		6AE5B20019BFDD930058B309 /* MedicineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE5B20519BFDD930058B309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AE5B20619BFDD930058B309 /* MedicineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTests.swift; sourceTree = "<group>"; };
+		6AF83F3919D343D10047CE0E /* Bluetooth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		6AF9AF2419C4C6E2008C79CA /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +79,13 @@
 		6AE5B1F019BFDD930058B309 /* Medicine */ = {
 			isa = PBXGroup;
 			children = (
+				6AF9AF2319C3E28C008C79CA /* Views */,
 				6AE5B1F319BFDD930058B309 /* AppDelegate.swift */,
 				6AE5B1F519BFDD930058B309 /* ViewController.swift */,
 				6AE5B1F719BFDD930058B309 /* Main.storyboard */,
 				6AE5B1FA19BFDD930058B309 /* Images.xcassets */,
 				6AE5B1F119BFDD930058B309 /* Supporting Files */,
+				6AF83F3919D343D10047CE0E /* Bluetooth.swift */,
 			);
 			path = Medicine;
 			sourceTree = "<group>";
@@ -107,6 +113,14 @@
 				6AE5B20519BFDD930058B309 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AF9AF2319C3E28C008C79CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6AF9AF2419C4C6E2008C79CA /* WalkthroughView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF83F3A19D343D10047CE0E /* Bluetooth.swift in Sources */,
 				6AE5B1F619BFDD930058B309 /* ViewController.swift in Sources */,
 				6AE5B1F419BFDD930058B309 /* AppDelegate.swift in Sources */,
+				6AF9AF2519C4C6E2008C79CA /* WalkthroughView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Medicine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -337,6 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Medicine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -395,6 +413,7 @@
 				6AE5B20C19BFDD930058B309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AE5B20D19BFDD930058B309 /* Build configuration list for PBXNativeTarget "MedicineTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +422,7 @@
 				6AE5B20F19BFDD930058B309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
