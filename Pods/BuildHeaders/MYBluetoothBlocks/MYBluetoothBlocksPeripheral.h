@@ -1,0 +1,1 @@
+../../MYBluetoothBlocks/Classes/MYBluetoothBlocksPeripheral.h

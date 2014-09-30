@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58C8D60807124696A5CA220F /* libPods-Medicine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A55564DBDEB48C99CD92C60 /* libPods-Medicine.a */; };
 		6AE5B1F419BFDD930058B309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5B1F319BFDD930058B309 /* AppDelegate.swift */; };
 		6AE5B1F619BFDD930058B309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5B1F519BFDD930058B309 /* ViewController.swift */; };
 		6AE5B1F919BFDD930058B309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5B1F719BFDD930058B309 /* Main.storyboard */; };
@@ -37,7 +38,10 @@
 		6AE5B20519BFDD930058B309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AE5B20619BFDD930058B309 /* MedicineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTests.swift; sourceTree = "<group>"; };
 		6AF83F3919D343D10047CE0E /* Bluetooth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		6AF83F3B19D365280047CE0E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		6AF9AF2419C4C6E2008C79CA /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		7A55564DBDEB48C99CD92C60 /* libPods-Medicine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Medicine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52A584A29724C7D9694EBB1 /* Pods-Medicine.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medicine.xcconfig"; path = "Pods/Pods-Medicine.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C8D60807124696A5CA220F /* libPods-Medicine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				6AE5B1F019BFDD930058B309 /* Medicine */,
 				6AE5B20319BFDD930058B309 /* MedicineTests */,
 				6AE5B1EF19BFDD930058B309 /* Products */,
+				C52A584A29724C7D9694EBB1 /* Pods-Medicine.xcconfig */,
+				7F50951418F141BD83B4095E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +93,7 @@
 				6AE5B1FA19BFDD930058B309 /* Images.xcassets */,
 				6AE5B1F119BFDD930058B309 /* Supporting Files */,
 				6AF83F3919D343D10047CE0E /* Bluetooth.swift */,
+				6AF83F3B19D365280047CE0E /* Bridging-Header.h */,
 			);
 			path = Medicine;
 			sourceTree = "<group>";
@@ -123,6 +131,14 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		7F50951418F141BD83B4095E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A55564DBDEB48C99CD92C60 /* libPods-Medicine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AE5B20A19BFDD930058B309 /* Build configuration list for PBXNativeTarget "Medicine" */;
 			buildPhases = (
+				7BE66757CDE34994BCF63671 /* Check Pods Manifest.lock */,
 				6AE5B1EA19BFDD930058B309 /* Sources */,
 				6AE5B1EB19BFDD930058B309 /* Frameworks */,
 				6AE5B1EC19BFDD930058B309 /* Resources */,
+				B874AD82CFE94C94964567DB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +190,11 @@
 				TargetAttributes = {
 					6AE5B1ED19BFDD930058B309 = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					6AE5B1FF19BFDD930058B309 = {
 						CreatedOnToolsVersion = 6.0;
@@ -216,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BE66757CDE34994BCF63671 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B874AD82CFE94C94964567DB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Medicine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6AE5B1EA19BFDD930058B309 /* Sources */ = {
@@ -338,6 +394,7 @@
 		};
 		6AE5B20B19BFDD930058B309 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C52A584A29724C7D9694EBB1 /* Pods-Medicine.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -345,11 +402,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Medicine/Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		6AE5B20C19BFDD930058B309 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C52A584A29724C7D9694EBB1 /* Pods-Medicine.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -357,6 +416,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Medicine/Bridging-Header.h";
 			};
 			name = Release;
 		};

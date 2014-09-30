@@ -1,0 +1,10 @@
+PODS:
+  - MYBluetoothBlocks (0.1.1)
+
+DEPENDENCIES:
+  - MYBluetoothBlocks
+
+SPEC CHECKSUMS:
+  MYBluetoothBlocks: fb39609df660c1e25654c56deafbf816e218083d
+
+COCOAPODS: 0.33.1
